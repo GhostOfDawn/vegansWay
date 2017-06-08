@@ -38,7 +38,8 @@ public class Config
     public static String CONFIG_WOOL_TUNIC_MAME;
     public static String CONFIG_WOOL_PANTS_NAME;
     public static String CONFIG_WOOL_BOOTS_NAME;
-    
+    public static String CONFIG_PUMPKIN_MILK_NAME;
+	
     public static void load(Configuration c)
     {
 	CONFIG_MODULE_CRAFTING_RECIPES = c.getBoolean("Crafting_Recipes");
@@ -55,5 +56,6 @@ public class Config
 	CONFIG_WOOL_TUNIC_MAME = c.getString("Wool_Tunic_Name");
 	CONFIG_WOOL_PANTS_NAME = c.getString("Wool_Pants_Name");
 	CONFIG_WOOL_BOOTS_NAME = c.getString("Wool_Boots_Name");
+	CONFIG_PUMPKIN_MILK_NAME = c.getString("Pumpkin_Milk_Name");
     }
 }
