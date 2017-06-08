@@ -49,11 +49,17 @@ public class CraftingRecipes
 	MaterialData bucket = new ItemStack(Material.BUCKET).getData();
 	MaterialData pumpkinSeeds = new ItemStack(Material.PUMPKIN_SEEDS).getData();
 	ItemStack milkBucket = new ItemStack(Material.MILK_BUCKET);
+	if (Config.CONFIG_MODULE_ITEMS_RENAMING == true) // Cambio de nombre
+	    {
+		milkBucket = ItemRenaming.changeName(milkBucket, Config.CONFIG_PUMPKIN_MILK_NAME);
+	    }    
+	    
 	shapelessRecipe = new ShapelessRecipe(milkBucket);
 	shapelessRecipe.addIngredient(bucket);
 	shapelessRecipe.addIngredient(pumpkinSeeds);
 	Bukkit.getServer().addRecipe(shapelessRecipe);
-
+	
+	    
 	// Carbon -> Tinta negra
 	MaterialData coal = new ItemStack(Material.COAL).getData();
 	ItemStack inksac = new ItemStack(Material.INK_SACK);
